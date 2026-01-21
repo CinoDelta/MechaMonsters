@@ -1,4 +1,4 @@
-Name: Daniel Opara
+# Name: Daniel Opara
 CS Teacher: Mr. Jon-Alf Dyrland Weaver
 
 This project is a roguelike that can be run in the terminal. It is 100 waves of 1v1 monster fights, with 4 types of monsters and many different upgrades you can choose for your attack, adding special skills, etc.
