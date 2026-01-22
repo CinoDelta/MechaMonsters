@@ -1,50 +1,70 @@
 package MainGameNec;
+
 public class statClass {
+    
     private int attackStat;
     private int defenseStat;
     private int speedStat;
     private int specialStat;
+    private int healthStat;
+    private int critRate;
+
     private String name;
 
-    public statClass(int attackStat, int defenseStat, int speedStat, int specialStat, String name) {
+    public statClass(int attackStat, int defenseStat, int speedStat, int specialStat, int healthStat, int critRate, String name) {
         this.attackStat = attackStat;
         this.defenseStat = defenseStat;
         this.speedStat = speedStat;
         this.specialStat = specialStat;
+        this.healthStat = healthStat;
+        this.critRate = critRate;
         this.name = name;
     }
 
     public int getAttack() {
-        return this.attackStat;
+        return attackStat;
     }
     public int getDefense() {
-        return this.defenseStat;
+        return defenseStat;
     }
     public int getSpeed() {
-        return this.speedStat;
+        return speedStat;
     }
     public int getSpecial() {
-        return this.specialStat;
+        return specialStat;
+    }
+    public int getHealth() {
+        return healthStat;
+    }
+    public int getCritRate() {
+        return critRate;
     }
 
-    public void setAttack(int newAttack) {
-        this.attackStat = newAttack;
+    public void setAttack(int attackStat) {
+        this.attackStat = attackStat;
     }
-    public void setDefense(int newDefense) {
-        this.defenseStat = newDefense;
+    public void setDefense(int defenseStat) {
+        this.defenseStat = defenseStat;
     }
-    public void setSpeed(int newSpeed) {
-        this.speedStat = newSpeed;
+    public void setSpeed(int speedStat) {
+        this.speedStat = speedStat;
     }
-    public void setSpecial(int newSpecial) {
-        this.specialStat = newSpecial;
+    public void setSpecial(int specialStat) {
+        this.specialStat = specialStat;
+    }
+
+    public void setHealth(int healthStat) {
+        this.healthStat = healthStat;
+    }
+    public void setCritRate(int critRate) {
+        this.critRate = critRate;
     }
 
     public String returnAllStats() {
-        return "Stats for " + this.name + "-> \n Attack: " + String.valueOf(this.attackStat) + "\n Defense: " + String.valueOf(this.defenseStat) + "\n Speed: " + String.valueOf(this.speedStat) + "\n Special: " + String.valueOf(this.specialStat);
+        return "Stats for " + name + "->\n Health: " + String.valueOf(healthStat) + "\n Attack: " + String.valueOf(attackStat) + "\n Defense: " + String.valueOf(defenseStat) + "\n Speed: " + String.valueOf(speedStat) + "\n Special: " + String.valueOf(specialStat);
     }
 
     public String getName() {
-        return this.name;
+        return name;
     }
 }
