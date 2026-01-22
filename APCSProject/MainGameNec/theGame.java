@@ -78,7 +78,7 @@ public class theGame {
 
 
 
-    private static void playerUpgrade(Player ourPlayer){
+    private static void playerUpgrade(Player ourPlayer) throws InterruptedException{
         List<String> upgrades = new ArrayList<String>();
 
         upgrades.add("Attack + 3");
