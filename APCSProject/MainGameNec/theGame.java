@@ -100,13 +100,13 @@ public class theGame {
         int upgradeChosen = playerOptionChoose(upgradesToChooseFrom);
         String chosenString = upgradesToChooseFrom[upgradeChosen];
         if (chosenString.substring(0, 6).compareTo("Attack ") == 0) {
-            ourPlayer.setAttack(ourPlayer.getAttack() + Integer.valueOf(chosenString.charAt(chosenString.length() - 1)));
+            ourPlayer.setAttack(ourPlayer.getAttack() + Integer.parseInt(chosenString.charAt(chosenString.length() - 1)));
         } else if (chosenString.substring(0, 6).compareTo("Defense") == 0) {
-            ourPlayer.setDefense(ourPlayer.getDefense() + Integer.valueOf(chosenString.charAt(chosenString.length() - 1)));
+            ourPlayer.setDefense(ourPlayer.getDefense() + Integer.parseInt(chosenString.charAt(chosenString.length() - 1)));
         } else if (chosenString.substring(0, 6).compareTo("Special") == 0) {
-            ourPlayer.setSpecial(ourPlayer.getSpecial() + Integer.valueOf(chosenString.charAt(chosenString.length() - 1)));
+            ourPlayer.setSpecial(ourPlayer.getSpecial() + Integer.parseInt(chosenString.charAt(chosenString.length() - 1)));
         } else {
-            ourPlayer.setHealth(ourPlayer.getHealth() + Integer.valueOf(chosenString.charAt(chosenString.length() - 1)));
+            ourPlayer.setHealth(ourPlayer.getHealth() + Integer.parseInt(chosenString.charAt(chosenString.length() - 1)));
         }     
 
         System.out.println("Upgraded!");
