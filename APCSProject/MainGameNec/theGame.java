@@ -76,6 +76,43 @@ public class theGame {
         }
     }
 
+
+
+    private static void playerUpgrade(Player ourPlayer){
+        List<String> upgrades = new ArrayList<String>();
+
+        upgrades.add("Attack + 3");
+        upgrades.add("Defense + 1");
+        upgrades.add("Special + 3");
+        upgrades.add("Health + 2");
+
+        String[] upgradesToChooseFrom = {"", ""};
+
+        System.out.println("New upgrades are available! Choose one out of the following:");
+
+        for (int i = 0; i < 2; i++) {
+            int randomPull = (int) Math.ceil(Math.random() * upgrades.size());
+            
+            upgradesToChooseFrom[i] = upgrades.get(randomPull);
+            upgrades.remove(randomPull);
+        }
+
+        int upgradeChosen = playerOptionChoose(upgradesToChooseFrom);
+        String chosenString = upgradesToChooseFrom[upgradeChosen];
+        if (chosenString.substring(0, 6).compareTo("Attack ") == 0) {
+            ourPlayer.setAttack(ourPlayer.getAttack() + String.valueOf(chosenString.charAt(chosenString.length() - 1)));
+        } else if (chosenString.substring(0, 6).compareTo("Defense") == 0) {
+            ourPlayer.setDefense(ourPlayer.getDefense() + String.valueOf(chosenString.charAt(chosenString.length() - 1)));
+        } else if (chosenString.substring(0, 6).compareTo("Special") == 0) {
+            ourPlayer.setSpecial(ourPlayer.getSpecial() + String.valueOf(chosenString.charAt(chosenString.length() - 1)));
+        } else {
+            ourPlayer.setHealth(ourPlayer.getHealth() + String.valueOf(chosenString.charAt(chosenString.length() - 1)));
+        }     
+
+        System.out.println("Upgraded!");
+    }
+    
+
     private static void battleLoop(int roundNum) throws InterruptedException {
         System.out.println("\u001b[32mBattle start!");
         System.out.println("\u001b[0m");
@@ -88,7 +125,7 @@ public class theGame {
 
         switch (roundNum) {
             case 0:
-                theMonster = new tutorialMonster(3, 1, 8, 2, 10, 3, "Booger", "Basic");
+                theMonster = new tutorialMonster(3, 1, 8, 2, 10, 3, "Booger", "Basic"); // attack defense speed special hp critrate name elemental type
                 break;
         
             default:
@@ -120,10 +157,9 @@ public class theGame {
                     battling = false;
                     break;
                 } else {
-                    System.out.println("P turn");
                     playersTurn(theMonster);
                     if (theMonster.isDead()) {
-                        battling = false; // wiiiinerrrrrrr winnnerrrr chickennn dinnerrrr pls put me into apcs period 3 and move my chem up one periodddddd
+                        battling = false; 
                     }
                 }
             }
@@ -218,8 +254,12 @@ public class theGame {
 
         Thread.sleep(3000);
 
-        System.out.println(thePlayer.getHealth());
         battleLoop(0);
 
+        Thread.sleep(2000);
+
+        playerUpgrade(thePlayer);
+
+        System.out.println("\u001b[32mYou win !!!!\u001b[0m");
     }
 }
