@@ -54,9 +54,7 @@ public class tutorialMonster extends Monster {
                 System.out.println("\u001b[31mCritical hit!!!\n");
                 Thread.sleep(1000);
             } else {
-                System.out.println(targetPerson.getHealth());
                 targetPerson.setHealth(targetPerson.getHealth() - damage);
-                System.out.println(targetPerson.getHealth());
             }
             System.out.println("\u001b[0m" + getName() + " did " + damage + " damage.");
             Thread.sleep(2000);
