@@ -2,13 +2,6 @@ package MainGameNec;
 import java.util.ArrayList;
 
 public class MechSuit extends statClass {
-    private int attackStat;
-    private int defenseStat;
-    private int speedStat;
-    private int specialStat;
-    private int healthStat;
-    private int critRate;
-    private String name;
     
     private String[] specialMoves = {"NONE", "NONE", "NONE", "NONE"};
 
