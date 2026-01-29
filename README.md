@@ -9,7 +9,7 @@ Download the code, and extract it. Save it somewhere. Make sure the theGame.java
 To compile it, just execute in the command prompt
 
 `
-cd [folder directory of APCSPROJECT]
+cd [folder directory of APCSPROJECT], then
 javac *.java
 `
 However, you should also pull the class files as well. But compile to be safe.
