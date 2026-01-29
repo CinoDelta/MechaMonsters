@@ -9,9 +9,6 @@ Download the code, and extract it. Save it somewhere. Make sure the theGame.java
 To compile it, just execute in the command prompt
 
 `
-cd [directory of MainGameNec folder on your computer]
-javac *.java
-cd [directory of Monsters folder on your conmputer]
 javac *.java
 `
 
