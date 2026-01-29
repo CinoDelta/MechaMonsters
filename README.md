@@ -7,7 +7,11 @@ You are given base stats and a mech suit that adds to your stats. Your mech suit
 # How to compile:
 Download the code, and extract it. Save it somewhere. Make sure the theGame.java stays where it is.
 To compile it, just run
+
 cd [repository directory] 
+
+then
+
 javac *.java
 
 # How to run:
