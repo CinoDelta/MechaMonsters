@@ -6,17 +6,20 @@ You are given base stats and a mech suit that adds to your stats. Your mech suit
 
 # How to compile:
 Download the code, and extract it. Save it somewhere. Make sure the theGame.java stays where it is.
-To compile it, just run
+To compile it, just execute in the command prompt
 
-cd [repository directory] 
-
-then
-
+`
+cd [directory of MainGameNec folder on your computer]
 javac *.java
+cd [directory of Monsters folder on your conmputer]
+javac *.java
+`
 
 # How to run:
 To run it, run
 java theGame
 
-If you have an IDE, just git clone the repository and run. It will auto compile and run the game. In the inputs other than putting in your name, only put in integer values.
+after switching to the directory of MainGameNec.
+
+If you have an IDE like VS code, just git clone the repository and run. It will auto compile and run the game. In the inputs other than putting in your name, only put in integer values.
 
