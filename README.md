@@ -22,3 +22,4 @@ after switching to the directory of MainGameNec.
 
 If you have an IDE like VS code, just git clone the repository and run. It will auto compile and run the game. In the inputs other than putting in your name, only put in integer values.
 
+Success! Accepted into APCS for the spring semester.
